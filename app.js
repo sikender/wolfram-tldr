@@ -1,6 +1,7 @@
 const express = require('express')
 const helmet = require('helmet')
 const apicache = require('apicache')
+const RateLimit = require('express-rate-limit')
 require('dotenv').config()
 var passport = require('./auth')
 
@@ -8,8 +9,14 @@ const app = express()
 app.use(helmet())
 app.use(passport.initialize())
 let cache = apicache.middleware
+const limiter = new RateLimit({
+  windowMs: 60 * 60 * 1000,
+  max: 100,
+  delayMs: 0
+})
 
 app.use('/api/v1/query',
+        limiter,
         passport.authenticate('bearer', { session: false }),
         cache('10 minutes'),
         require('./routes/v1/index'))
