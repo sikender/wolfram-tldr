@@ -5,10 +5,8 @@ var passport = require('./auth')
 const app = express()
 app.use(passport.initialize())
 
-app.get('/',
-  passport.authenticate('bearer', { session: false }),
-  function (req, res) {
-    res.send('hi')
-  })
+app.use('/api/v1/query',
+        passport.authenticate('bearer', { session: false }),
+        require('./routes/v1/index'))
 
 module.exports = app
