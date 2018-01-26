@@ -12,6 +12,7 @@
     "express-rate-limit": "^2.11.0",
     "helmet": "^3.10.0",
     "lowdb": "^1.0.0",
+    "morgan": "^1.9.0",
     "passport": "^0.4.0",
     "passport-http-bearer": "^1.0.1",
     "wolfram-alpha-api": "https://products.wolframalpha.com/api/libraries/javascript/wolfram-alpha-api-1.0.0-rc.1.tgz"
