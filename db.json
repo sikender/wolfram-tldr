@@ -1,0 +1,22 @@
+{
+  "users": [
+    { 
+      "id": 1, 
+      "username": "john",
+      "email": "john@example.com",
+      "token": "01c46413-3cfb-4603-b526-1b4dfebea7d5"
+    },
+    { 
+      "id": 2, 
+      "username": "jill",
+      "email": "jill@example.com",
+      "token": "f12df7ac-39c6-42a0-b9f1-001d837a8245"
+    },
+    { 
+      "id": 3, 
+      "username": "joseph",
+      "email": "joseph@example.com",
+      "token": "e038f750-1788-4625-9567-36478a89190e"
+    }
+  ]
+}
