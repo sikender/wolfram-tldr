@@ -1,9 +1,11 @@
 const express = require('express')
+const helmet = require('helmet')
 const apicache = require('apicache')
 require('dotenv').config()
 var passport = require('./auth')
 
 const app = express()
+app.use(helmet())
 app.use(passport.initialize())
 let cache = apicache.middleware
 
