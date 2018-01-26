@@ -3,7 +3,7 @@ const helmet = require('helmet')
 const apicache = require('apicache')
 const RateLimit = require('express-rate-limit')
 require('dotenv').config()
-var passport = require('./auth')
+const passport = require('./auth')
 
 const app = express()
 app.use(helmet())
