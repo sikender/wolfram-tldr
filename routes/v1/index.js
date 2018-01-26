@@ -55,6 +55,8 @@ router.get('/', (req, res) => {
     }
 
     res.send(response)
+  }).catch(() => {
+    res.status(500).send('Internal Server Error')
   })
 })
 
