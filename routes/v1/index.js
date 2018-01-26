@@ -9,7 +9,7 @@ router.get('/', (req, res) => {
   // Send a 400 (Bad request http error) in case the client
   // doesn't send the 'input' query parameter or if it is empty
   // of if the 'format' input query is other than 'json' or 'xml'
-  if (!input || (format !== 'json' && format !== 'xml')) {
+  if (!input || input[0] === ' ' || (format !== 'json' && format !== 'xml')) {
     return res.status(400).send('Bad Request')
   }
 
