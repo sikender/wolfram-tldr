@@ -14,6 +14,7 @@ presents it in json or xml formats.
   ```bash
     git clone https://github.com/sikender/wolfram-tldr.git
   ```
+  * cd into the directory and run `npm install` to install dependencies.
   * Now head over to [Wolfram Alpha API](https://developer.wolframalpha.com/portal/signup.html) site and sign up for an APPID.
   * Rename the .env.sample file to .env and add the APPID and the PORT you wish to run the server on to it.
   * Done. To run the app just execute:
